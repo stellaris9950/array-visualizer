@@ -1,7 +1,16 @@
 // Array Visuallizer
 
+
+let containerEl = document.getElementById("container")
+
 //Global Variable
-let myData = [400, 500, 250, 550, 100, 300];
+let myData = [];
+for (let n = 1; n <= 600; n += 10){
+    myData.push(n);
+}
+console.log(myData);
+
+
 
 //Display Date
 drawArray();
@@ -10,8 +19,17 @@ drawArray();
 function drawArray() {
     let outputStr = ""
     for (let i = 0; i < myData.length; i++){
-        outputStr +=
+        outputStr += `<div style="height:${myData[i]}px"></div>`;
     }
+    containerEl.innerHTML = outputStr
 }
 
+
+
+//Key Event Stuff
+document.addEventListener("keyDown", keydownHandler);
+
+function keydownHandler(event) {
+    console.log(event.keyCode);
+}
 

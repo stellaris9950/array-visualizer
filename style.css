@@ -11,4 +11,12 @@ body {
   width: 800px;
   height: 600px;
   margin: auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+#container div {
+  background-color: orange;
+  border: 1px solid gray;
+  flex: 1;
 }
